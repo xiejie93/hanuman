@@ -1,5 +1,30 @@
 <html>
+  <head>
+    <style>
+      div{
+        width:500px;
+        height:500px;
+        border:1px solid gray;
+      }
+    </style>
+  </head>
 <body>
   this is a test.(index.html)
+  <input type="button" value="click it" onclick="change()">
+ <div id="text"></div>
+  <script>
+  function change(){
+    var request=new XMLHttpRequest();
+    //request.onreadystatechange=function(){
+     // if(ready.readyState===4&& request.status===200){
+       // var type=request.getResponseText("Content-Type");
+       // if（）{}
+      //}
+    //}
+    document.getElementById("text").innerHTML=request.responseText;
+    request.open("GET","text.txt",true);
+    request.send();
+  }
+  </script>
 </body>
 </html>
