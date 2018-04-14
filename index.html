@@ -11,7 +11,7 @@
 <body>
   this is a test.(index.html)
   <input type="button" value="click it" onclick="change()">
- <div id="text"></div>
+ <div id="text">hahaha</div>
   <script>
   function change(){
     var request=new XMLHttpRequest();
@@ -21,9 +21,11 @@
        // if（）{}
       //}
     //}
-     request.open("GET","text.txt",true);
-    document.getElementById("text").innerHTML=request.responseText;
-    request.send();
+   //  request.open("GET","text.txt",true);
+   // document.getElementById("text").innerHTML=request.responseText;
+   // request.send();
+    alert(
+    document.getElementById("text").innerHTML);
   }
   </script>
 </body>
