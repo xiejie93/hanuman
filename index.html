@@ -13,14 +13,8 @@
   <input type="button" value="click it" onclick="change()">
  <div id="text">hahaha</div>
   <script>
-  function change(){
+  function change() {
     var request=new XMLHttpRequest();
-    //request.onreadystatechange=function(){
-     // if(ready.readyState===4&& request.status===200){
-       // var type=request.getResponseText("Content-Type");
-       // if（）{}
-      //}
-    //}
     request.onreadystatechange=function()
   {
   if (request.readyState==4 && xmlhttp.status==200)
@@ -31,7 +25,7 @@
 
      request.open("GET","text.txt",true);
     request.send();
-   
+  }
   </script>
 </body>
 </html>
