@@ -60,5 +60,12 @@
 	<input type="button" value="点击我查看其它文件" id="btnAjax">
 	<div id="jax">这里是ajax的地方
 	</div>
+	<script>
+		var request=new XMLHttpRequest();
+		document.getElementById("btnAjax").onclick=funcion (){
+			request.open("GET","test.txt");
+			request.send();
+		}
+	</script>
 </body>
 </html>
