@@ -57,15 +57,30 @@
 		</div>
 		<div class="intro"></div>
 	</div>
-	<input type="button" value="点击我查看其它文件" id="btnAjax" oncick="xj()">
+	<input type="button" value="点击我查看其它文件" id="btnAjax" onclick="loadXMLDoc()"
 	<div id="jax">这里是ajax的地方
 	</div>
 	<script>
-		function xj(){
-		var request=new XMLHttpRequest();
-		
-			request.open("GET","test.txt");
-			request.send();
+		function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("jax").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","test.txt",true);
+xmlhttp.send();
 		}
 		
 	</script>
