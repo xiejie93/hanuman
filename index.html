@@ -57,15 +57,17 @@
 		</div>
 		<div class="intro"></div>
 	</div>
-	<input type="button" value="点击我查看其它文件" id="btnAjax">
+	<input type="button" value="点击我查看其它文件" id="btnAjax" oncick="xj()">
 	<div id="jax">这里是ajax的地方
 	</div>
 	<script>
+		function xj(){
 		var request=new XMLHttpRequest();
-		document.getElementById("btnAjax").onclick=funcion (){
+		
 			request.open("GET","test.txt");
 			request.send();
 		}
+		
 	</script>
 </body>
 </html>
